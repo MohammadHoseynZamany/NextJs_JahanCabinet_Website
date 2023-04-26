@@ -4,8 +4,7 @@ import { useRouter } from "next/router"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { changeActivePage, removeActivePage } from "../features/header/headerSlice"
-import logo from "../../public/logo.png"
-
+import logo from "/public/logo.png"
 
 export default function Header(props) {
     const currentPage = useRouter().asPath
@@ -18,23 +17,22 @@ export default function Header(props) {
         , [currentPage])
     
     const links_class = useSelector((state) => state.Header)
-    const ulStyle = {
-        backgroundColor: '#FAEDCD'
-    }
+
+    const liClassName = "border-solid border-2 border-gray-300 display: inline-block py-3 px-5 mx-3 cursor-pointer active hover:bg-neutral-300 active:bg-teal-100 active:coursor-wait"
 
     return (
         <div className="container">
-        <ul className="nav nav-expand-lg nav-tabs justify-content-center my-2 mx-3 pt-2 rounded d-block d-sm-flex text-center" style={ulStyle}>
-            <li className="nav-item">
-                <Link className={links_class.home} href="/">خانه</Link>
+        <ul className="text-center border-solid border-2 border-gray-400 display">
+            <li className={ liClassName } id="home">
+                <Link className={links_class.home} href="/" for="home">خانه</Link>
             </li>
-            <li className="nav-item">
+            <li className={ liClassName }>
                 <Link className={links_class.aboutUs} href="/aboutus">درباره ما</Link>
             </li>
-            <li className="nav-item">
+            <li className={ liClassName }>
                 <Link className={links_class.contactUs} href="/contactus">تماس با ما</Link>
             </li>
-            <li className="nav-item">
+            <li className={ liClassName }>
                 <Link className={links_class.samples} href="/samples">نمونه کار ها</Link>
             </li>
         </ul>
