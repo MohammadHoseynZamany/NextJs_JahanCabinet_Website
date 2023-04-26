@@ -1,6 +1,6 @@
 export default function Home() {
     return (
-        <div className="my-5 mx-3 shadow-lg shadow-gray-200 rounded-lg mx-10 cursor-default">
+        <div className="my-5 mx-3 shadow-lg shadow-gray-200 rounded-lg mx-10 cursor-default pb-5 rounded-full">
             <div className="text-center animate-bounce font-mono">
                 به وبسایت جهان کابینت خوش آمدید
             </div>
