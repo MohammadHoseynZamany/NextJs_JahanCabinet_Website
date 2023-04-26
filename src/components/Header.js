@@ -18,24 +18,22 @@ export default function Header(props) {
     
     const links_class = useSelector((state) => state.Header)
 
-    const liClassName = "border-solid border-2 border-gray-300 display: inline-block py-3 px-5 mx-3 cursor-pointer active hover:bg-neutral-300 active:bg-teal-100 active:coursor-wait"
+    const linkClassName = "sm:border-2  shadow-lg shadow-gray-100 border-b-4 py-3 px-5 mx-3 cursor-pointer active hover:bg-orange-300 hover:text-white active:bg-orange-500 active:text-white active:cursor-wait block sm:inline-block rounded-full active:animate-ping"
 
     return (
-        <div className="container">
-        <ul className="text-center border-solid border-2 border-gray-400 display">
-            <li className={ liClassName } id="home">
-                <Link className={links_class.home} href="/" for="home">خانه</Link>
-            </li>
-            <li className={ liClassName }>
-                <Link className={links_class.aboutUs} href="/aboutus">درباره ما</Link>
-            </li>
-            <li className={ liClassName }>
-                <Link className={links_class.contactUs} href="/contactus">تماس با ما</Link>
-            </li>
-            <li className={ liClassName }>
-                <Link className={links_class.samples} href="/samples">نمونه کار ها</Link>
-            </li>
-        </ul>
+    <div className="flex">
+        <div className="m-auto my-3 p-2 inline-block rounded-2xl sm:rounded-full shadow-xl bg-orange-50">
+            <Link className={ linkClassName } href="/" for="home">خانه</Link>
+            <Link className={ linkClassName } href="/aboutus">درباره ما</Link>
+            <Link className={ linkClassName } href="/contactus">تماس با ما</Link>
+            <Link className={ linkClassName } href="/samples">نمونه کار ها</Link>
         </div>
+    </div>
     )
 }
+
+
+{/* <Link className={links_class.home} href="/" for="home">خانه</Link>
+<Link className={links_class.aboutUs} href="/aboutus">درباره ما</Link>
+<Link className={links_class.contactUs} href="/contactus">تماس با ما</Link>
+<Link className={links_class.samples} href="/samples">نمونه کار ها</Link> */}
