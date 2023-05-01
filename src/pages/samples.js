@@ -1,7 +1,7 @@
-export default function Samples() {
+import Samples from "@/components/Samples";
+
+export default function samples() {
     return (
-        <h1>
-            Samples Page
-        </h1>
+        <Samples />
     )
 }
