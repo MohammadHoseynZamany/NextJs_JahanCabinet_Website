@@ -1,6 +1,6 @@
 export default function ContactUs() {
     return (
-        <div className="my-5 mx-3 pb-5 shadow-2xl shadow-gray-600 rounded-lg mx-10 cursor-default rounded-full">
+        <div className="my-5 mx-3 shadow-2xl shadow-gray-600 rounded-lg mx-10 cursor-default rounded-full bg-blue-50 px-6 py-6">
             <div className="text-center animate-bounce font-mono">
                 تماس با ما
             </div>
