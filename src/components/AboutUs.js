@@ -1,6 +1,6 @@
 export default function AboutUs() {
     return (
-        <div className="my-5 mx-3 shadow-2xl shadow-gray-600 rounded-lg mx-10 cursor-default rounded-full bg-blue-50 px-6 py-6">
+        <div className="my-5 mx-3 shadow-2xl shadow-gray-600 rounded-lg mx-10 cursor-default rounded-full bg-blue-50 px-6 py-6 hover:-translate-y-2 hover:translate-x-1">
             <div className="text-center animate-bounce font-mono">
                 درباره ما
             </div>
